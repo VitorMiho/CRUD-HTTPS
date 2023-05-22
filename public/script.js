@@ -47,7 +47,7 @@ function logar(){
        const senhaa = form.senha;
 
        if(senha == senhaa){
-            window.location.href = "index.html"
+            window.location.href = "form.html"
        }else{
             alert("Usuario ou senha incorreta!")
             window.location.reload(true)
