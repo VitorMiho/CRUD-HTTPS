@@ -34,6 +34,7 @@ function usuario(){
         },
         body: JSON.stringify({id:login, senha:senha})
     }).then(response => response.json())
+ location.reload();
 }
 function logar(){
 
