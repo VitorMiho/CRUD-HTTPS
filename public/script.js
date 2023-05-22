@@ -12,7 +12,7 @@
 
     
 
-    fetch('formulario', {
+    fetch('/formulario', {
         method: "POST",
         headers:{
             'Content-type': 'application/json'
@@ -27,7 +27,7 @@ function usuario(){
     const login = document.getElementById("login").value;
     const senha = document.getElementById("senha").value;
 
-    fetch('login', {
+    fetch('/login', {
         method: "POST",
         headers:{
             'Content-type': 'application/json'
@@ -40,7 +40,7 @@ function logar(){
     const id = document.getElementById("login").value;
     const senha = document.getElementById("senha").value;
 
-    fetch(`login/${id}`,{
+    fetch(`/login/${id}`,{
         method: "GET"
     }).then(response => response.json())
     .then(form => {
@@ -59,7 +59,7 @@ function logar(){
 function busarDados(){
     const id = document.getElementById("id").value;
 
-    fetch(`formulario/${id}`,{
+    fetch(`/formulario/${id}`,{
         method: "GET"
     }).then(response => response.json())
     .then(form => {
@@ -87,7 +87,7 @@ function atualizarDados(){
     const endereco = document.getElementById("endereco").value;
     const inform = document.getElementById("inform").value;
 
-    fetch(`formulario/${id}`,{
+    fetch(`/formulario/${id}`,{
         method: 'PUT',
         headers:{
             'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ function atualizarDados(){
 function deletarDados(){
     const id = document.getElementById('id').value;
 
-    fetch(`formulario/${id}`,{
+    fetch(`/formulario/${id}`,{
         method: 'DELETE'
     }).then(response => response.json())
 
@@ -115,7 +115,7 @@ function deletarDados(){
 //     const login = document.getElementById("login").value;
 //     const senha = document.getElementById("senha").value;
 
-//     fetch('http://localhost:3000/formulario', {
+//     fetch('/formulario', {
 //         method: "POST",
 //         headers:{
 //             'Content-type': 'application/json'
